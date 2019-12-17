@@ -5,6 +5,7 @@
     <form action="" method="post">
         {{ form.errors.message }}
         <label>{{ form.message.label }}{{ form.message }}</label><br/>
+                <label>{{ form.message.label }}{{ form.lastname }}</label><br/>
         {% csrf_token %}
         <input type="submit" value="登録">
     </form>

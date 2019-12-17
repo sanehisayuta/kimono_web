@@ -9,6 +9,7 @@
         <tr>
           <th> </th>
           <th>message</th>
+          <th>lastname</th>
           <th>created_at</th>
           <th>updated_at</th>
           <th> </th>
@@ -19,6 +20,7 @@
           <tr>
             <td><input type="checkbox" name="delete_ids" value="{{ message.id }}"></td>
             <td>{{ message.message }}</td>
+            <td>{{ message.lastname }}</td>
             <td>{{ message.created_at }}</td>
             <td>{{ message.updated_at }}</td>
             <td><a href="{% url 'edit' message.id %}">更新画面へ</a></td>
