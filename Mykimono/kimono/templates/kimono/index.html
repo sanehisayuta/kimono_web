@@ -8,8 +8,12 @@
       <thead>
         <tr>
           <th> </th>
-          <th>message</th>
+          <th>firstname</th>
           <th>lastname</th>
+          <th>email</th>
+          <th>mobile_number</th>
+          <th>security_code</th>
+          <th>free_zone</th>
           <th>created_at</th>
           <th>updated_at</th>
           <th> </th>
@@ -21,6 +25,10 @@
             <td><input type="checkbox" name="delete_ids" value="{{ message.id }}"></td>
             <td>{{ message.message }}</td>
             <td>{{ message.lastname }}</td>
+            <td>{{ message.email }}</td>
+            <td>{{ message.mobile_number }}</td>
+            <td>{{ message.security_code }}</td>
+            <td>{{ message.free_zone }}</td>
             <td>{{ message.created_at }}</td>
             <td>{{ message.updated_at }}</td>
             <td><a href="{% url 'edit' message.id %}">更新画面へ</a></td>

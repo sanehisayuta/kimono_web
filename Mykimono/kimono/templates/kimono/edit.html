@@ -5,7 +5,12 @@
     <form action="" method="post">
         {{ form.errors.message }}
         <label>{{ form.message.label }}{{ form.message }}</label><br/>
-                <label>{{ form.message.label }}{{ form.lastname }}</label><br/>
+        <label>{{ form.lastname.label }}{{ form.lastname }}</label><br/>
+        <label>{{ form.email.label }}{{ form.email }}</label><br/>
+        <label>{{ form.mobile_number.label }}{{ form.mobile_number }}</label><br/>
+        <label>{{ form.security_code.label }}{{ form.security_code }}</label><br/>
+        <label>{{ form.free_zone.label }}{{ form.free_zone }}</label><br/>
+
         {% csrf_token %}
         <input type="submit" value="登録">
     </form>
