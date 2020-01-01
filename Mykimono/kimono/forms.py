@@ -30,6 +30,17 @@ class MessageForm(forms.Form):
         required=True,
         widget=forms.NumberInput()
     )
+    hotel = forms.fields.ChoiceField(
+    label="Hotel",
+    required=True,
+    widget=forms.widgets.Select(),
+    )
+    hotel_another = forms.CharField(
+        label='If you choose another',
+        max_length=50,
+        required=False,
+        widget=forms.TextInput()
+    )
     date = forms.DateField(
         label='Date',
         required=True,
@@ -40,9 +51,14 @@ class MessageForm(forms.Form):
         required=True,
         widget=forms.TimeInput()
     )
+    kimono_select = forms.fields.ChoiceField(
+    label="kimono",
+    required=True,
+    widget=forms.widgets.Select(),
+    )
     pay_type = forms.fields.ChoiceField(
     label="Pay_type",
-    required=False,
+    required=True,
     widget=forms.widgets.Select(),
     )
     card_number = forms.IntegerField(
@@ -52,12 +68,12 @@ class MessageForm(forms.Form):
     )
     expiry_date = forms.fields.ChoiceField(
     label="Expiry Date",
-    required=False,
+    required=True,
     widget=forms.widgets.Select(),
     )
     expiry_year = forms.fields.ChoiceField(
     label="year",
-    required=False,
+    required=True,
     widget=forms.widgets.Select(),
     )
     security_code = forms.CharField(
