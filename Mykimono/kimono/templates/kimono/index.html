@@ -10,8 +10,14 @@
           <th> </th>
           <th>firstname</th>
           <th>lastname</th>
+          <th>gender</th>
           <th>email</th>
           <th>mobile_number</th>
+          <th>date</th>
+          <th>time</th>
+          <th>pay_type</th>
+          <th>card_number</th>
+          <th>expiry_date</th><th>expiry_year</th>     
           <th>security_code</th>
           <th>free_zone</th>
           <th>created_at</th>
@@ -25,8 +31,14 @@
             <td><input type="checkbox" name="delete_ids" value="{{ message.id }}"></td>
             <td>{{ message.message }}</td>
             <td>{{ message.lastname }}</td>
+            <td>{{ message.gender }}</td>
             <td>{{ message.email }}</td>
             <td>{{ message.mobile_number }}</td>
+            <td>{{ message.date }}</td>
+            <td>{{ message.time }}</td>
+            <td>{{ message.pay_type }}</td>
+            <td>{{ message.card_number }}</td>
+            <td>{{ message.expiry_date }}</td>
             <td>{{ message.security_code }}</td>
             <td>{{ message.free_zone }}</td>
             <td>{{ message.created_at }}</td>
