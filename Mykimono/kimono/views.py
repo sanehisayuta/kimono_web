@@ -5,6 +5,9 @@ from .models import Message
 from .forms import MessageForm
 from .forms import forms
 # Create your views here.
+def main(request):
+    return render(request, 'kimono/main.html',{})
+
 def index(request):
     form = MessageForm(request.POST or None)
     form.fields["pay_type"].choices = [
