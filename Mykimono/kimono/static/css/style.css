@@ -1,3 +1,5 @@
+{% load static %}
+
 * {
   margin: 0;
   padding: 0;
@@ -53,7 +55,7 @@ header{
   height: 650px;
   text-align: center;
   color: #CC3333;
-  background-image: url("img/mainhead1.jpg");
+  background: url("/static/img/mainhead1.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -119,27 +121,27 @@ header{
 }
 
 .bg-1{
-  background-image: url(img/kimono1.png);
+  background-image: url("/static/img/kimono1.png");
 }
 
 .bg-2{
-  background-image: url(img/kimono2.png);
+  background-image: url("/static/img/kimono2.png");
 }
 
 .bg-3{
-  background-image: url(img/kimono3.png);
+  background-image: url("/static/img/kimono3.png");
 }
 
 .bg-4{
-  background-image: url(img/kimono4.png);
+  background-image: url("/static/img/kimono4.png");
 }
 
 .bg-5{
-  background-image: url(img/kimono5.png);
+  background-image: url("/static/img/kimono5.png");
 }
 
 .bg-6{
-  background-image: url(img/kimono6.png);
+  background-image: url("/static/img/kimono6.png");
 }
 
 #feature{
@@ -198,7 +200,7 @@ header{
   height: 250px;
   margin: 0 auto;
   border-radius: 50%;
-  background-image: url(img/iniad.jpg);
+  background-image: url("/static/img/iniad.jpg");
 }
 
 .discription-title{
@@ -327,7 +329,7 @@ footer{
   }
 
   #mv{
-    background-image: url(img/code.png);
+    background-image: url("/static/img/code.png");
   }
 
   .mv-title{
