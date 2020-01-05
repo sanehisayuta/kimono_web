@@ -1,10 +1,33 @@
 {% extends "base.html" %}
 
 {% block body %}
+{% load static %}
+<html lang="en" class="fa-events-icons-ready"><head>
+  <meta charset="UTF-8">
+  <!--viewport-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>着物レンタル登録画面</title>
+  <link rel="stylesheet" href="{% static 'css/style3.css' %}">
+  <link rel="shortcut icon" href="{% static 'img/logo.png' %}">
+<link href="https://use.fontawesome.com/2fd86bc506.css" media="all" rel="stylesheet"></head>
+<body>
+<!--Header-->
+  <header>
+    <div class="container clearfix">
+      <a href="main"><td align="left"><img class="logo" src="{% static 'img/logo.png' %}" alt="ロゴ"></td></a>
+      <nav>
+        <ul class="nav">
+
+          <li class="nav-list"><td align="center">Reserve Form</td></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
     <a href="{% url 'index' %}">一覧画面へ</a>
+    <div class="production-group clearfix">
     <form action="" method="post">
         {{ form.errors.message }}
-        <label>{{ form.message.label }}{{ form.message }}</label><br/>
+        <div><label>{{ form.message.label }}{{ form.message }}</label></div>
         <label>{{ form.lastname.label }}{{ form.lastname }}</label><br/>
         <label>{{ form.gender.label }}{{ form.gender }}</label><br/>
         <label>{{ form.email.label }}{{ form.email }}</label><br/>
@@ -19,8 +42,14 @@
         <label>{{ form.expiry_date.label }}{{ form.expiry_date }}{{ form.expiry_year.label }}{{ form.expiry_year }}</label><br/>
         <label>{{ form.security_code.label }}{{ form.security_code }}</label><br/>
         <label>{{ form.free_zone.label }}{{ form.free_zone }}</label><br/>
-
         {% csrf_token %}
         <input type="submit" value="登録">
     </form>
+    <div class="production bg-1 sp-none">No1</div>
+    <div class="production bg-2">No2</div>
+    <div class="production bg-3 sp-none">No3</div>
+    <div class="production bg-4">No4</div>
+    <div class="production bg-5 sp-none">No5</div>
+    <div class="production bg-6">No6</div>
+  </div>
 {% endblock %}

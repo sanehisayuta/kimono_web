@@ -1,6 +1,30 @@
 {% extends "base.html" %}
 
 {% block body %}
+{% load static %}
+<html lang="en" class="fa-events-icons-ready"><head>
+  <meta charset="UTF-8">
+  <!--viewport-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>個人予約ページ</title>
+  <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+  <link rel="shortcut icon" href="{% static 'img/logo.png' %}">
+<link href="https://use.fontawesome.com/2fd86bc506.css" media="all" rel="stylesheet"></head>
+<body>
+<!--Header-->
+  <header>
+    <div class="container clearfix">
+      <a href="main"><td align="left"><img class="logo" src="{% static 'img/logo.png' %}" alt="ロゴ"></td></a>
+      <nav>
+        <ul class="nav">
+
+          <li class="nav-list"><td align="center">Your reserve</td></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="portfolio">
+    <div class="container">
   <a href="{% url 'add' %}">登録画面へ</a>
 
   <form method="post" action="{% url 'delete' %}">
@@ -56,4 +80,6 @@
     {% csrf_token %}
     <input type="submit" value="削除">
   </form>
+  </div>
+  </section>
 {% endblock %}
